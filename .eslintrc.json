@@ -20,16 +20,12 @@
     "plugins": [
         "react",
         "@typescript-eslint",
-        "simple-import-sort", 
-        "unused-imports"
+        "simple-import-sort"
     ],
     "rules": {
         "react/display-name": "off",
-        "react-hooks/exhaustive-deps": ["warn"],
         "@typescript-eslint/no-unused-vars": "off",
         "simple-import-sort/exports": "error",
-        "simple-import-sort/imports": "error",
-        "unused-imports/no-unused-imports": "error",
-            "unused-imports/no-unused-vars": "off"
+        "simple-import-sort/imports": "error"
       }
 }
