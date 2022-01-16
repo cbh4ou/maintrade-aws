@@ -1,10 +1,13 @@
-import './index.css';
+import './styles/styles.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './pages/App';
-import * as serviceWorker from './pages/serviceWorker';
+import App from './pages/App/App';
+import * as serviceWorker from './pages/App/serviceWorker';
+
+// create barrel export
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
