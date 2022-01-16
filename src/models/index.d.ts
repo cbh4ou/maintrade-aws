@@ -1,9 +1,5 @@
 import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplify/datastore";
 
-
-
-
-
 export declare class Metrics {
   readonly id: string;
   readonly risk?: number;
