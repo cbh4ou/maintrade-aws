@@ -17,7 +17,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "downlevelIteration": true,
     "incremental": true,
     "allowSyntheticDefaultImports": true,
@@ -26,8 +26,10 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/pages/App/index.js", "src/index.js"  ],
+    "**/*.tsx",
+   "src/pages/app/index.js",
+    "src/index.js"
+  ],
   "exclude": [
     "node_modules"
   ]
