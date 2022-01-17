@@ -5,7 +5,7 @@ const withOptimizedImages = require('next-optimized-images');
 // disabled is commented out for debugging
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withPWA(withOptimizedImages({
+const nextConfig = withOptimizedImages(withPWA({
   reactStrictMode: true,
   pwa: {
     dest: 'public',
