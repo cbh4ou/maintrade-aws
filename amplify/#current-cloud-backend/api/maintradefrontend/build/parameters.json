@@ -1,0 +1,17 @@
+{
+    "CreateAPIKey": 1,
+    "AppSyncApiName": "maintradefrontend",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcognitocf0c6096",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "S3DeploymentBucket": "amplify-maintradefrontend-dev-64342-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/730a5c96166197183d319d75396527c952887dc3"
+}
