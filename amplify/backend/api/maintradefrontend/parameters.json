@@ -7,5 +7,6 @@
       "authcognitocf0c6096",
       "Outputs.UserPoolId"
     ]
-  }
+  },
+  "APIKeyExpirationEpoch": -1
 }
