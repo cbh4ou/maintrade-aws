@@ -1,6 +1,6 @@
 // import { InjectedConnector } from '@web3-react/injected-connector'
 // import { WalletLinkConnector } from '@web3-react/walletlink-connector'
-import Image from 'next/image'
+// import Image from 'next/image'
 // import Link from 'next/link'
 import React, { FC } from 'react'
 
@@ -30,17 +30,12 @@ export const DesktopNav: FC<DesktopNavProps> = ({ mobileMenuOpen }) => {
     <div className="flex flex-col gap-3 px-6 py-3">
       <div className="grid items-center justify-between grid-cols-2">
         <div className="flex items-center">
-          <div className="min-w-[48px] h-6">
+          {/* <div className="min-w-[48px] h-6">
             <Image src="/images/logo.svg" alt="Sushi logo" width="24px" height="24px" />
-          </div>
+          </div> */}
           <div className="flex space-x-1.5 hidden sm:block">
-            <NavLink
-              //   href={chainId && featureEnabled(Feature.TRIDENT, chainId) ? '/trident/swap' : '/swap'}
-              activeClassName={ACTIVE_NAV_LINK_CLASS}
-            >
-              <a id="swap-nav-link" className={NAV_BASE_CLASS}>
-                {`Swap`}
-              </a>
+            <NavLink href={'/swap'} activeClassName={ACTIVE_NAV_LINK_CLASS}>
+              <a className={NAV_BASE_CLASS}>{`Portfolios`}</a>
             </NavLink>
           </div>
         </div>
