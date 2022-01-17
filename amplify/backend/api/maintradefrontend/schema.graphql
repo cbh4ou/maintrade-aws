@@ -1,5 +1,0 @@
-type Metrics @model @auth(rules: [{allow: public}, {allow: private, provider: iam}, {allow: owner}]) {
-  id: ID!
-  risk: Float
-  momentum: String
-}

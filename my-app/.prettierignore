@@ -1,0 +1,6 @@
+# Ignore all CSS files:
+*.css
+
+# Ignore artifacts:
+build
+coverage
