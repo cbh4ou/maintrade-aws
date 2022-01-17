@@ -1,12 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import Amplify from 'aws-amplify';
 import React from 'react';
 
-import aws_exports from '../aws-exports';
+import aws_exports from '../../aws-exports';
 Amplify.configure(aws_exports);
 
 const Home: NextPage = () => {
