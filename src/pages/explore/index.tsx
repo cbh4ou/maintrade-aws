@@ -68,7 +68,7 @@ const Miso = () => {
                     <Typography
                       weight={700}
                       className={classNames(
-                        tab.key === (queryToAuctionStatus[query?.status as string] || AuctionStatus.LIVE)
+                        tab.key === (queryToAuctionStatus[query?.status as string] || AuctionStatus.FINISHED)
                           ? 'bg-gradient-to-r from-red to-pink bg-clip-text text-transparent'
                           : '',
                         'font-bold text-sm text-high-emphesis'
