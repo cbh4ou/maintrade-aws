@@ -129,7 +129,7 @@ function Web3StatusInner() {
     )
   } else {
     return (
-      <Web3Connect className="!bg-dark-900 bg-gradient-to-r from-pink/80 hover:from-pink to-purple/80 hover:to-purple text-white h-[38px]" />
+      <Web3Connect className="!bg-dark-900 bg-gradient-to-r from-green/40 hover:from-green to-black/80 hover:to-black text-white h-[38px]" />
     )
   }
 }

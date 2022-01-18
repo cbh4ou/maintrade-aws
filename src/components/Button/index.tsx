@@ -29,7 +29,7 @@ const FILLED = {
   purple: 'bg-purple hover:bg-purple-600 text-white',
   gray: 'bg-dark-700 hover:bg-dark-800 text-white',
   green: 'bg-green hover:bg-green-600 text-black',
-  gradient: 'bg-gradient-to-r from-blue to-pink text-white',
+  gradient: 'bg-gradient-to-r from-black to-green text-white',
   white: 'bg-gray-50 hover:bg-gray-200 text-black',
 }
 
@@ -55,7 +55,7 @@ const EMPTY = {
   green: 'text-green hover:text-green-700',
   gray: 'text-gray-300 hover:text-gray-400',
   white: 'text-white hover:border-gray-400/50 hover:text-gray-300',
-  gradient: 'bg-gradient-to-r from-blue to-pink bg-clip-text text-transparent hover:from-blue-600 hover:to-pink-600',
+  gradient: 'bg-gradient-to-r from-black to-green bg-clip-text text-transparent hover:from-blue-600 hover:to-pink-600',
 }
 
 const VARIANT = {

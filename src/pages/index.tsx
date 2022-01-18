@@ -1,5 +1,9 @@
 import Container from 'app/components/Container'
+import Amplify from 'aws-amplify'
 import Head from 'next/head'
+
+import aws_exports from '../../aws-exports'
+Amplify.configure(aws_exports)
 
 export default function Dashboard() {
   return (

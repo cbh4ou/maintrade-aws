@@ -9,7 +9,7 @@ const DoubleGlowShadow: FC<{ className?: string }> = ({ children, className }) =
     <div className={classNames(className, 'relative w-full max-w-2xl')}>
       <div
         className={classNames(
-          isDesktop ? 'from-pink/5 to-blue/5' : ' from-pink/25 to-blue/25',
+          isDesktop ? 'from-green/20 to-black/40' : ' from-green/25 to-black/25',
           'fixed inset-0 bg-gradient-radial'
         )}
       />
