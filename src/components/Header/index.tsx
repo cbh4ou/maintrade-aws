@@ -1,11 +1,12 @@
-import Container from '@app/components/Container'
-import { classNames } from '@app/functions'
 import { Popover } from '@headlessui/react'
 import useScrollPosition from '@react-hook/window-scroll'
+import Container from 'app/components/Container'
+import { classNames } from 'app/functions'
 import { useRouter } from 'next/router'
 import React, { FC, Fragment } from 'react'
 
 import { DesktopNav } from './DesktopNav'
+import { MobileNav } from './MobileNav'
 
 const HEADER_HEIGHT = 64
 
@@ -19,7 +20,7 @@ const Header: FC = () => {
         <Popover as={Fragment}>
           {({ open }) => {
             const background =
-              pathname.includes('portfolios') && scrollY <= HEADER_HEIGHT / 3 && !open
+              pathname.includes('swap') && scrollY <= HEADER_HEIGHT / 3 && !open
                 ? ''
                 : 'backdrop-blur-[20px] bg-[rgba(255,255,255,0.03)] border-b border-[rgba(255,255,255,0.12)]'
 
@@ -27,6 +28,7 @@ const Header: FC = () => {
               <nav className={classNames(background, 'z-10 w-full')}>
                 <Container maxWidth="7xl" className="mx-auto">
                   <DesktopNav mobileMenuOpen={open} />
+                  <MobileNav />
                 </Container>
               </nav>
             )

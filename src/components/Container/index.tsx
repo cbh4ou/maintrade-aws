@@ -1,4 +1,4 @@
-import { classNames } from '@app/functions'
+import { classNames } from 'app/functions'
 import { ReactNode } from 'react'
 
 export type MaxWidth = 'full' | '7xl' | '6xl' | '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'
