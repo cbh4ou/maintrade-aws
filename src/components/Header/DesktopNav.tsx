@@ -51,7 +51,7 @@ export const DesktopNav: FC<DesktopNavProps> = ({ mobileMenuOpen }) => {
             )}
 
             {chainId && featureEnabled(Feature.MISO, chainId) && (
-              <NavLink href="/explore">
+              <NavLink href="/explore" activeClassName={ACTIVE_NAV_LINK_CLASS}>
                 <a id="explore-nav-link" className={NAV_BASE_CLASS}>
                   {i18n._(t`Explore`)}
                 </a>
