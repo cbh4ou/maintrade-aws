@@ -17,7 +17,7 @@ import React from 'react'
 import { RecoilRoot } from 'recoil'
 
 export default function Pair() {
-  useRedirectOnChainId('/lend')
+  useRedirectOnChainId('/portfolios')
 
   const router = useRouter()
   const { i18n } = useLingui()

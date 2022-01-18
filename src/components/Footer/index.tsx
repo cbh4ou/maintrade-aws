@@ -59,9 +59,9 @@ const Footer = () => {
                 {i18n._(t`Liquidity Pools`)}
               </Typography>
             </Link>
-            <Link href="/lend" passHref={true}>
+            <Link href="/portfolios" passHref={true}>
               <Typography variant="sm" className="text-low-emphesis">
-                {i18n._(t`Lending`)}
+                {i18n._(t`Portfolios`)}
               </Typography>
             </Link>
             <Link href="/miso" passHref={true}>

@@ -61,7 +61,7 @@ export const MobileNav: FC = () => {
 
         {chainId && featureEnabled(Feature.KASHI, chainId) && (
           <>
-            <Link href="/lend">
+            <Link href="/portfolios">
               <a id="lend-nav-link" className={NAV_BASE_CLASS}>
                 {i18n._(t`Lend`)}
               </a>

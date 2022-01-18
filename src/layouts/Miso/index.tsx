@@ -1,6 +1,6 @@
-import Background from 'app/components/Background'
+// import Background from 'app/components/Background'
+// import Footer from 'app/components/Footer'
 import Container, { MaxWidth } from 'app/components/Container'
-import Footer from 'app/components/Footer'
 import Header from 'app/components/Header'
 import Main from 'app/components/Main'
 import Popups from 'app/components/Popups'
@@ -28,7 +28,7 @@ export const MisoHeader: FC<MisoHeaderProps> = ({
       {...props}
       className={classNames('relative w-full bg-opacity-80 flex flex-col items-center shadow-md', className)}
     >
-      <Background variant="miso-bowl" />
+      {/* <Background variant="miso-bowl" /> */}
       <Container
         maxWidth={maxWidth}
         className={classNames(
@@ -67,7 +67,7 @@ const MisoLayout: FC = ({ children }) => {
         <div className="w-full flex-grow flex flex-col">{children}</div>
         <Popups />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

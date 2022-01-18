@@ -159,7 +159,7 @@ export default function Create() {
         summary: `Add Kashi market ${currencies[Field.ASSET].symbol}/${currencies[Field.COLLATERAL].symbol} Chainlink`,
       })
 
-      router.push('/lend')
+      router.push('/portfolios')
     } catch (e) {
       console.error(e)
     }

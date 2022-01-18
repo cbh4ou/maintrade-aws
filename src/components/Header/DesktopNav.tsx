@@ -36,94 +36,24 @@ export const DesktopNav: FC<DesktopNavProps> = ({ mobileMenuOpen }) => {
     <div className="flex flex-col gap-3 px-6 py-3">
       <div className="grid items-center justify-between grid-cols-2">
         <div className="flex items-center">
-          <div className="min-w-[48px] h-10">
-            <Image src="/images/logo.svg" alt="MainTrade logo" width="48px" height="48px" />
+          <div className="min-w-[48px] h-6">
+            <Image src="/images/logo.svg" alt="MainTrade logo" width="24px" height="24px" />
           </div>
           <div className="flex space-x-1.5 hidden sm:block">
-            <NavLink
-              href={chainId && featureEnabled(Feature.TRIDENT, chainId) ? '/trident/swap' : '/swap'}
-              activeClassName={ACTIVE_NAV_LINK_CLASS}
-            >
-              <a id="swap-nav-link" className={NAV_BASE_CLASS}>
-                {i18n._(t`Swap`)}
-              </a>
-            </NavLink>
-
-            {chainId && featureEnabled(Feature.TRIDENT, chainId) && (
-              <NavLink href="/trident/pools" activeClassName={ACTIVE_NAV_LINK_CLASS}>
-                <a id="trident-nav-link" className={NAV_BASE_CLASS}>
-                  {i18n._(t`Trident`)}
-                </a>
-              </NavLink>
-            )}
-
-            {chainId && featureEnabled(Feature.TRIDENT, chainId) && (
-              <NavLink href="/trident/balances/wallet" activeClassName={ACTIVE_NAV_LINK_CLASS}>
-                <a id="trident-nav-link" className={NAV_BASE_CLASS}>
-                  {i18n._(t`Balances`)}
-                </a>
-              </NavLink>
-            )}
-
-            <NavLink href="/pool" activeClassName={ACTIVE_NAV_LINK_CLASS}>
-              <a id="pool-nav-link" className={NAV_BASE_CLASS}>
-                {i18n._(t`Pool`)}
-              </a>
-            </NavLink>
-
-            {chainId &&
-              (featureEnabled(Feature.TRIDENT, chainId) ? (
-                <NavLink href="/trident/migrate" activeClassName={ACTIVE_NAV_LINK_CLASS}>
-                  <a id="trident-migrate-nav-link" className={NAV_BASE_CLASS}>
-                    {i18n._(t`Migrate`)}
-                  </a>
-                </NavLink>
-              ) : (
-                featureEnabled(Feature.MIGRATE, chainId) && (
-                  <NavLink href={'/migrate'} activeClassName={ACTIVE_NAV_LINK_CLASS}>
-                    <a id="migrate-nav-link" className={NAV_BASE_CLASS}>
-                      {i18n._(t`Migrate`)}
-                    </a>
-                  </NavLink>
-                )
-              ))}
-
-            {chainId && featureEnabled(Feature.LIQUIDITY_MINING, chainId) && (
-              <NavLink href="/farm" activeClassName={ACTIVE_NAV_LINK_CLASS}>
-                <a id="farm-nav-link" className={NAV_BASE_CLASS}>
-                  {i18n._(t`Farm`)}
-                </a>
-              </NavLink>
-            )}
-
             {chainId && featureEnabled(Feature.KASHI, chainId) && (
               <>
-                <NavLink href="/lend" activeClassName={ACTIVE_NAV_LINK_CLASS}>
-                  <a id="lend-nav-link" className={NAV_BASE_CLASS}>
-                    {i18n._(t`Lend`)}
-                  </a>
-                </NavLink>
-
-                <NavLink href="/borrow" activeClassName={ACTIVE_NAV_LINK_CLASS}>
-                  <a id="borrow-nav-link" className={NAV_BASE_CLASS}>
-                    {i18n._(t`Borrow`)}
+                <NavLink href="/portfolios" activeClassName={ACTIVE_NAV_LINK_CLASS}>
+                  <a id="portfolios-nav-link" className={NAV_BASE_CLASS}>
+                    {i18n._(t`Portfolios`)}
                   </a>
                 </NavLink>
               </>
             )}
 
-            {chainId && featureEnabled(Feature.STAKING, chainId) && (
-              <NavLink href="/stake">
-                <a id="stake-nav-link" className={NAV_BASE_CLASS}>
-                  {i18n._(t`Stake`)}
-                </a>
-              </NavLink>
-            )}
-
             {chainId && featureEnabled(Feature.MISO, chainId) && (
-              <NavLink href="/miso">
-                <a id="launch-nav-link" className={NAV_BASE_CLASS}>
-                  {i18n._(t`Launch`)}
+              <NavLink href="/explore">
+                <a id="explore-nav-link" className={NAV_BASE_CLASS}>
+                  {i18n._(t`Explore`)}
                 </a>
               </NavLink>
             )}

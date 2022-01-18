@@ -71,7 +71,7 @@ const InformationDisclosure = ({ farm }) => {
                     {` `}
                     {i18n._(t`to the`)}
                     {` `}
-                    <NavLink href={`/lend/${farm.pair.id}`}>
+                    <NavLink href={`/portfolios/${farm.pair.id}`}>
                       <a className="text-sm text-blue">
                         {farm.pair.token0.symbol}/{farm.pair.token1.symbol}
                       </a>

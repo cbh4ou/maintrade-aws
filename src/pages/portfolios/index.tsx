@@ -8,11 +8,15 @@ import { Feature } from 'app/enums'
 import { useKashiPairAddresses, useKashiPairs } from 'app/features/kashi/hooks'
 import ListHeaderWithSort from 'app/features/kashi/ListHeaderWithSort'
 import MarketHeader from 'app/features/kashi/MarketHeader'
+import Menu from 'app/features/onsen/FarmMenu'
+import { usePositions } from 'app/features/onsen/hooks'
 import { formatNumber, formatPercent } from 'app/functions/format'
+import { classNames } from 'app/functions/styling'
 import NetworkGuard from 'app/guards/Network'
 import { useInfiniteScroll } from 'app/hooks/useInfiniteScroll'
 import useSearchAndSort from 'app/hooks/useSearchAndSort'
 import Layout from 'app/layouts/Kashi'
+import { useActiveWeb3React } from 'app/services/web3'
 import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
@@ -165,7 +169,7 @@ export default function Lend() {
 
 const LendEntry = ({ pair, userPosition = false }) => {
   return (
-    <Link href={'/lend/' + pair.address}>
+    <Link href={'/portfolios/' + pair.address}>
       <a className="block text-high-emphesis">
         <div className="grid items-center grid-flow-col grid-cols-4 gap-4 px-4 py-4 text-sm rounded md:grid-cols-6 lg:grid-cols-7 align-center bg-dark-800 hover:bg-dark-blue">
           <div className="flex flex-col items-start sm:flex-row sm:items-center">
@@ -233,18 +237,14 @@ const LendEntry = ({ pair, userPosition = false }) => {
 Lend.Provider = RecoilRoot
 
 const LendLayout = ({ children }) => {
-  const { i18n } = useLingui()
+  const { chainId } = useActiveWeb3React()
+  const positions = usePositions(chainId)
   return (
     <Layout
       left={
-        <Card
-          className="h-full bg-dark-900"
-          backgroundImage="/images/kashi/deposit.png"
-          title={i18n._(t`Lend your assets, earn yield with no impermanent loss`)}
-          description={i18n._(
-            t`Isolated lending markets mitigate your risks as an asset lender. Know exactly what collateral is available to you in the event of counter party insolvency.`
-          )}
-        />
+        <div className={classNames('sticky top-0 hidden lg:block md:col-span-1')} style={{ maxHeight: '40rem' }}>
+          <Menu positionsLength={positions.length} />
+        </div>
       }
     >
       {children}
