@@ -3,7 +3,7 @@ import Amplify from 'aws-amplify'
 import Head from 'next/head'
 
 import aws_exports from '../../aws-exports'
-Amplify.configure(aws_exports)
+Amplify.configure({ ...aws_exports, ssr: true })
 
 export default function Dashboard() {
   return (
